@@ -276,6 +276,20 @@ pageClass: routes
 
 <Route author="maokwen" example="/hugo/releases" path="/hugo/releases"/>
 
+## iFi audio
+
+### Download Hub
+
+<Route author="NavePnow" example="/ifi-audio/download/1503007035/44472" path="/ifi-audio/download/:val/:id" :paramsDesc="['商品 val', '商品 id']"/>
+
+::: warning 注意
+
+1.  打开网站 <https://ifi-audio.com/download-hub> 并打开 Inspect -> Network 调试面板
+2.  在网站中选择设备以及对应的 serial number，点击搜索
+3.  在 Network 面板中找到最后一个 <https://ifi-audio.com/wp-admin/admin-ajax.php> 请求，查看 Payload 中的 val 和 id，填写在 url 中
+
+:::
+
 ## ImageMagick
 
 ### Changelog
@@ -471,6 +485,12 @@ pageClass: routes
 
 <Route author="Cesaryuan nczitzk" example="/quicker/versions" path="/quicker/versions"/>
 
+## RemNote
+
+### 变更日志
+
+<Route author="TonyRL" example="/remnote/changelog" path="/remnote/changelog" radar="1" rssbud="1"/>
+
 ## RescueTime
 
 ### Release Notes
@@ -597,6 +617,12 @@ pageClass: routes
 ### Download
 
 <Route author="nczitzk" example="/wdc/download/279" path="/wdc/download/:id?" :paramsDesc="['软件 id，可在对应软件页 URL 中找到，默认为 279，即 Western Digital Dashboard']"/>
+
+## WizFile
+
+### 更新日志
+
+<Route author="Fatpandac" example="/wizfile/updates" path="/wizfile/updates"/>
 
 ## WizTree
 
